@@ -66,8 +66,3 @@ output "container-name" {
   value       = [for i in docker_container.nodered_container[*] : i.name]
   description = "The name of the container"
 }
-
-# output "container-name-2" {
-#   value = docker_container.nodered_container[1].name
-#   description = "The name of the container"
-# }
