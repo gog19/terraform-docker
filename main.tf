@@ -33,7 +33,7 @@ resource "docker_container" "nodered_container" {
 
   ports {
     internal = var.int_port
-    external = var.ext_port[count.index]
+    external = lookup(var.ext_port, var.env)[count.index]
   }
   
   volumes {
