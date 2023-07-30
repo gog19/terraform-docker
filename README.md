@@ -1,21 +1,19 @@
 # GitHub on AWS Cloud9 with SSH
 
-## Create an EC2 Environment
-### For Platform, choose the type of Ubuntu EC2 instance
-https://console.aws.amazon.com/cloud9/
+### Create an EC2 Environment. For Platform, choose the type of Ubuntu EC2 instance
+`https://console.aws.amazon.com/cloud9/``
 
-## Clone your GitHub project inside of your AWS Cloud9 environment
-<!--mkdir terraform-docker/ && cd terraform-docker/-->
-git clone https://github.com/gog19/terraform-docker.git
+### Clone your GitHub project inside of your AWS Cloud9 environment
+`git clone https://github.com/gog19/terraform-docker.git`
 
 ## Resize an Amazon EBS volume that an environment uses
 ### Run the following command, replacing 20 with the size in GiB that you want to resize the Amazon EBS volume to:
-cd terraform-docker/
-chmod +x resize.sh
-./resize.sh 20
+`cd terraform-docker/``
+```chmod +x resize.sh```
+```./resize.sh 20```
 
 ## Generate RSA Key Pair.
-ssh-keygen -t rsa
+```ssh-keygen -t rsa```
 
 ## Copy the Public Key to You GitHub Account.
 cat ~/.ssh/id_rsa.pub
